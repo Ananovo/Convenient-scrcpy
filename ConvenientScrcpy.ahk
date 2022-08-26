@@ -1,9 +1,9 @@
 #NoEnv
-#SingleInstance Force 		;Reload when restart
-#IfWinActive ahk_class SDL_app 	;Enable hotkey scripts when active scrcpy window
+#SingleInstance Force
+#IfWinActive ahk_class SDL_app ;Enable hotkeys when active scrcpy
 
 SendMode Input
-Path:="C:\Program Files (x86)\scrcpy-win64-v1.17" ;Edit it to your path
+Path:="C:\Program Files (x86)\scrcpy-win64-v1.17" ;Edit your scrcpy path
 
 
 Gui Font,s12,Microsoft YaHei UI
@@ -16,8 +16,8 @@ ButtonUSB:
 Gui Destroy
 Run %Path%\scrcpy.exe,%Path%
 WinWaitActive ahk_class SDL_app
-Send !o 			;Turn device screen off after start
-WinHide %Path%\scrcpy.exe 	;Hide the cmd window after start
+Send !o						;Turn device screen off after boot
+WinHide %Path%\scrcpy.exe	;Hide the CMD after boot
 return
 
 ButtonTCP:
@@ -34,15 +34,15 @@ WinHide %Path%\scrcpy.exe
 return
 
 
-;Send button hotkey
-CapsLock & 1:: 		;Hotkey
+;Hotkey£ºSend button
+CapsLock & 1::
 	WinGetPos,,,w,h,ahk_class SDL_app
 	x:=632/1080*w 	;x of send button / Screen width
 	y:=787/2400*h 	;y of send button / Screen height
 	Click %x%,%y%
 	return
 
-;Selecting words hotkey
+;Hotkey£ºSelect words
 CapsLock & 2::
 	Loop 1
 		Send {Right}
