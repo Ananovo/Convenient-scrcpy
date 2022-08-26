@@ -1,4 +1,4 @@
-# Convenient-scrcpy
+# ConvenientScrcpy
 Scripts of starting scrcpy and hotkey
 
 ## Require
