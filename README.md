@@ -9,7 +9,7 @@ AutoHotkey中文社区：[AHK+Shell 便捷启动 scrcpy 及快捷键 – AutoAHK
 1. Easy start of wireless connection
 1. Custom hotkey click in all window size and selecting words
 
-## Uasge
+## Usage
 Edit scrcpy path and relative coordinate of your phone UI
 
 ## Other
