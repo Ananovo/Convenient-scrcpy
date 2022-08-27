@@ -1,10 +1,6 @@
-#NoEnv
-#SingleInstance Force
-#IfWinActive ahk_class SDL_app ;Enable hotkeys when active scrcpy
-
-SendMode Input
-Path:="C:\Program Files (x86)\scrcpy-win64-v1.17" ;Edit your scrcpy path
-
+ï»¿SendMode Input
+#IfWinActive ahk_class SDL_app						;Enable hotkeys when active scrcpy
+Path:="C:\Program Files (x86)\scrcpy-win64-v1.17"	;Edit your scrcpy path
 
 Gui Font,s12,Microsoft YaHei UI
 Gui Add,Button,,USB
@@ -34,45 +30,48 @@ WinHide %Path%\scrcpy.exe
 return
 
 
-;Hotkey£ºSend button
+;Hotkey:Send button
 CapsLock & 1::
-	WinGetPos,,,w,h,ahk_class SDL_app
-	x:=632/1080*w 	;x of send button / Screen width
-	y:=787/2400*h 	;y of send button / Screen height
-	Click %x%,%y%
-	return
+WinGetPos,,,w,h,ahk_class SDL_app
+x:=632/1080*w	;x of send button / Screen width
+y:=787/2400*h 	;y of send button / Screen height
+Click %x%,%y%
+return
 
-;Hotkey£ºSelect words
+;Hotkey:Select words
 CapsLock & 2::
-	Loop 1
-		Send {Right}
-	Send {Space}
-	return
+Loop 1
+	Send {Right}
+Send {Space}
+return
 
 CapsLock & 3::
-	Loop 2
-		Send {Right}
-	Send {Space}
-	return
+Loop 2
+	Send {Right}
+Send {Space}
+return
 
 CapsLock & 4::
-	Loop 3
-		Send {Right}
-	Send {Space}
-	return
+Loop 3
+	Send {Right}
+Send {Space}
+return
 
 CapsLock & 5::
-	Loop 4
-		Send {Right}
-	Send {Space}
-	return
+Loop 4
+	Send {Right}
+Send {Space}
+return
 
 CapsLock & 6::
-	Loop 5
-		Send {Right}
-	Send {Space}
-	return
+Loop 5
+	Send {Right}
+Send {Space}
+return
 
+
+#NoEnv
+#SingleInstance Force
 
 GuiClose:
 	ExitApp
