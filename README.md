@@ -1,5 +1,5 @@
 # ConvenientScrcpy
-AutoHotkey中文社区：[AHK+Shell 便捷启动 scrcpy 及快捷键 – AutoAHK](https://www.autoahk.com/?p=39692)
+[AHK+Shell 便捷启动 scrcpy 及快捷键 – AutoAHK](https://www.autoahk.com/?p=39692)
 
 ## Require
 1. [scrcpy](https://github.com/Genymobile/scrcpy)
